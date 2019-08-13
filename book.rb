@@ -5,14 +5,8 @@ class Book
         @finished = finished
         @count = count
     end
-    def title=(str)
-        @title = str
-    end
     def title
         @title
-    end
-    def author=(str)
-        @author = str
     end
     def author
         @author
@@ -20,7 +14,13 @@ class Book
     def finished=(boolean)
         @finished = false
     end
+    def finished
+        @finished
+    end
     def count=(number)
         @count = number
+    end
+    def count
+        @count
     end
 end

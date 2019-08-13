@@ -2,6 +2,7 @@ class Book
   attr_reader :title, :author
   attr_writer :finished
   attr_accessor :count
+  include Lendable
   def initialize(title, author)
     @title = title
     @author = author
@@ -15,4 +16,10 @@ class Book
       Book.new("Effective Testing with RSpec 3", "Myron Marston"),
     ]
   end
+end
+
+module Lendable  
+  def lend
+      self.count = self.count - 1 unless self.count <= 0
+  end  
 end

@@ -1,3 +1,5 @@
+require "./lendable.rb"
+
 class Book
   attr_reader :title, :author
   attr_writer :finished
@@ -31,10 +33,4 @@ class Book
       Book.new("Effective Testing with RSpec 3", "Myron Marston"),
     ]
   end
-end
-
-module Lendable  
-  def lend
-      self.count = self.count - 1 unless self.count <= 0
-  end  
 end

@@ -4,11 +4,26 @@ class Book
   attr_accessor :count
   include Lendable
   def initialize(title, author)
-    @title = title
-    @author = author
+    self.title = title
+    self.author = author
     @finished = false
     @count = 3
-  end    
+  end
+
+  def title=(title)
+    if title == nil or title.length == 0
+      raise ArgumentError.new('Book must include a title')
+    end
+    @title = title
+  end
+
+  def author=(author)
+    if author == nil or author.length == 0
+      raise ArgumentError.new('Book must include an author')
+    end
+    @author = author
+  end
+
   def recommended_books
       [
       Book.new("The Well-Grounded Rubyist", "David A. Black"),

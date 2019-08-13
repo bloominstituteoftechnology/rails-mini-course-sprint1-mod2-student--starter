@@ -1,7 +1,17 @@
+module Lendable
+    def Lend 
+        if self.count > 0
+            self.count -= 1
+        end
+        count 
+    end
+end
+
 class Book
     attr_reader :title, :author
     attr_writer :finished
     attr_accessor :count
+    include Lendable
     def initialize(title, author)
         @title = title
         @author = author

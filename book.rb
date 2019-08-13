@@ -1,24 +1,24 @@
 class Book
-    def intialize(title, author, finished, count)
+    def intialize(title, author)
         @title = title
         @author = author
-        @finished = finished
-        @count = count
+        @finished = false
+        @count = 3
+    end
+    def title=(str)
+        @title = str
     end
     def title
         @title
     end
+    def author=(str)
+        @author = str
+    end
     def author
         @author
     end
-    def finished=(boolean)
-        @finished = false
-    end
     def finished
         @finished
-    end
-    def count=(number)
-        @count = number
     end
     def count
         @count

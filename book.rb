@@ -18,4 +18,4 @@ class Book
     end
 end
 
-    
+
